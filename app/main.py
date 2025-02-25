@@ -8,7 +8,7 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Dependencia para obtener la sesión de la base de datos 
+# Dependencia para obtener la sesión de la base de datos  
 def get_db():
     db = SessionLocal()
     try:
