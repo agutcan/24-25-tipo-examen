@@ -63,8 +63,6 @@ services:
     #   - "8000:8000"
     depends_on:
       - db
-    env_file:
-      - .env
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.api.rule=Host(`api.aarongutierrez.tech`)"
@@ -76,8 +74,6 @@ services:
     image:  mariadb #  mysql   
     container_name: api-db
     restart: always
-    env_file:
-      - .env
     # ports:
     #   - "3306:3306"
     volumes:

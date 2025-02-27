@@ -47,5 +47,5 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
 def update_user(user_id: int, user_update: schemas.UserUpdate, db: Session = Depends(get_db)):
     updated_user = crud.update_user(db, user_id, user_update)
     if not updated_user:
-        raise HTTPException(status_code=404, detail="User not foundd")
+        raise HTTPException(status_code=404, detail="User not founddd")
     return updated_user
